@@ -208,6 +208,22 @@ export default defineConfig({
       'workbox-core',
       'workbox-precaching'
     ],
+    // Exclude packages that use TypeScript decorators for ASN.1 schema registration
+    // esbuild strips decorator metadata, breaking schema registration at runtime
+    exclude: [
+      '@peculiar/asn1-schema',
+      '@peculiar/asn1-x509',
+      '@peculiar/asn1-rsa',
+      '@peculiar/asn1-ecc',
+      '@peculiar/asn1-pkcs8',
+      '@peculiar/asn1-pkcs9',
+      '@peculiar/asn1-cms',
+      '@peculiar/asn1-csr',
+      '@peculiar/asn1-pfx',
+      '@peculiar/asn1-x509-attr',
+      '@peculiar/webcrypto',
+      '@peculiar/x509',
+    ],
   },
   esbuild: {
     target: 'es2020'
