@@ -46,7 +46,7 @@ const Domain = () => {
         if (hostname === domain) return true;
 
         return hostname.endsWith(`.${domain}`) || hostname === domain;
-      } catch (e) {
+      } catch {
         return false;
       }
     },
@@ -70,7 +70,7 @@ const Domain = () => {
       subplebbitAddresses: string[];
       filter: CommentsFilter;
     } = {
-      newerThan: searchQuery ? 0 : timeFilterSeconds ?? 0,
+      newerThan: searchQuery ? 0 : (timeFilterSeconds ?? 0),
       sortType,
       subplebbitAddresses,
       filter: { filter: filterFunc, key: filterKey },
