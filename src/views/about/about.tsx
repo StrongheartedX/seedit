@@ -89,7 +89,7 @@ export const FAQ = () => {
         <p>
           If you're comfortable with the command line, you can use{' '}
           <a href='https://github.com/bitsocialhq/bitsocial-cli' target='_blank' rel='noopener noreferrer'>
-            plebbit-cli
+            bitsocial-cli
           </a>{' '}
           to create your own community. Otherwise, you can download{' '}
           <a href='https://github.com/bitsocialhq/seedit/releases/latest' target='_blank' rel='noopener noreferrer'>
